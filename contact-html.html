@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Catnip Acres Veterinary Clinic</title>
+    <meta name="description" content="Contact Catnip Acres Veterinary Clinic in Waynesburg, PA for appointments, questions, or information about our veterinary services.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/api/placeholder/60/60" alt="Catnip Acres Logo">
+                <div class="logo-text">
+                    <h1>Catnip Acres</h1>
+                    <span>Veterinary Clinic</span>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="hours.html">Hours</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon theme-toggle-icon moon"></i>
+                        <i class="fas fa-sun theme-toggle-icon sun"></i>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you and your pet</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p>1159 Morris Street<br>Waynesburg, PA 15370<br>United States</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(724) 627-0846</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@catnip-acres.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div>
+                            <h3>Additional Info</h3>
+                            <p>Our new Clinic location is right next to CVS in Waynesburg! We are very excited to be able to start over in a new building after the fire.</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required> I understand that this form is for non-emergency communication only.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.984535295674!2d-80.17845388487551!3d39.89720797942702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8835a1de0e03dede%3A0xc7be7c3e7e4dd596!2s1159%20Morris%20St%2C%20Waynesburg%2C%20PA%2015370!5e0!3m2!1sen!2sus!4v1637338732421!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="directions">
+                    <h3>Directions</h3>
+                    <p>We are located right next to CVS Pharmacy in Waynesburg. Our facility is easily accessible with ample parking available.</p>
+                    <h4>From I-79:</h4>
+                    <ol>
+                        <li>Take exit 14 for PA-21 toward Waynesburg</li>
+                        <li>Turn east onto PA-21 E/Roy Furman Hwy</li>
+                        <li>Continue onto High Street</li>
+                        <li>Turn right onto Morris Street</li>
+                        <li>Our clinic will be on your right</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>How do I schedule an appointment?</h3>
+                    <p>To schedule an appointment, please call our office at (724) 627-0846 during our regular business hours. We recommend scheduling routine wellness exams at least 1-2 weeks in advance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I bring to my pet's first appointment?</h3>
+                    <p>Please bring any previous medical records, current medications, a list of any symptoms or concerns, and a fresh stool sample if possible. Dogs should be on leashes and cats should be in secure carriers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you accept walk-ins?</h3>
+                    <p>We accept walk-ins for vaccinations only on Wednesdays from 10:00 AM to 2:00 PM. For all other services, an appointment is required.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I get my pet's medication refilled?</h3>
+                    <p>For medication refills, please call us at least 48 hours in advance. Some medications may require a recent examination before they can be refilled.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Request Notice -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="notice-container">
+                <h2 class="section-title">Appointment Requests</h2>
+                <div class="notice">
+                    <p><strong>Important:</strong> While you may send us a message using the form above, please note that the fastest way to schedule an appointment is to call our office directly at (724) 627-0846 during regular business hours.</p>
+                    <p>For urgent matters, please call us rather than using the contact form, as messages may not be reviewed immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Catnip Acres</h3>
+                    <p>Providing affordable veterinary care for cats and dogs in Waynesburg, PA and the surrounding area.</p>
+                    <p>"Saving a life, one animal at a time"</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="hours.html">Hours</a></li>
+                        <li><a href="payment.html">Payment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#wellness">Wellness Exams</a></li>
+                        <li><a href="services.html#vaccinations">Vaccinations</a></li>
+                        <li><a href="services.html#spay-neuter">Spay & Neuter</a></li>
+                        <li><a href="services.html#diagnostics">Diagnostic Services</a></li>
+                        <li><a href="services.html#surgery">Surgical Procedures</a></li>
+                        <li><a href="services.html#telehealth">Telehealth Consultations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 1159 Morris Street, Waynesburg, PA 15370</li>
+                        <li><i class="fas fa-phone"></i> (724) 627-0846</li>
+                        <li><i class="fas fa-envelope"></i> info@catnip-acres.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Catnip Acres Veterinary Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script>
+        // Contact Form Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, you would send the form data to your server
+                    // For demo purposes, we'll just show a success message
+                    const formData = new FormData(contactForm);
+                    const formValues = Object.fromEntries(formData.entries());
+                    
+                    // Simulate form submission
+                    contactForm.innerHTML = `
+                        <div class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for contacting Catnip Acres Veterinary Clinic. We'll get back to you as soon as possible.</p>
+                        </div>
+                    `;
+                    
+                    // Scroll to success message
+                    contactForm.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
