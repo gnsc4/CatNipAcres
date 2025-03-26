@@ -5,46 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Catnip Acres Veterinary Clinic</title>
     <meta name="description" content="Explore the range of veterinary services offered by Catnip Acres Veterinary Clinic in Waynesburg, PA, including wellness exams, vaccinations, spay/neuter, and more.">
+    <link rel="icon" href="Logo_CatNipAcres.png" type="image/png">
+    <link rel="shortcut icon" href="Logo_CatNipAcres.png" type="image/png">
     <link rel="stylesheet" href="css-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="/api/placeholder/60/60" alt="Catnip Acres Logo">
-                <div class="logo-text">
-                    <h1>Catnip Acres</h1>
-                    <span>Veterinary Clinic</span>
-                </div>
-            </div>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="hours.html">Hours</a></li>
-                    <li><a href="payment.html">Payment</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="theme-toggle" id="theme-toggle">
-                        <i class="fas fa-moon theme-toggle-icon moon"></i>
-                        <i class="fas fa-sun theme-toggle-icon sun"></i>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Page Banner -->
     <section class="page-banner">
         <div class="container">
-            <h1>Our Services</h1>
-            <p>Comprehensive veterinary care for your pets</p>
+            <h1>Our Services & Pricing</h1>
+            <p>Comprehensive veterinary care for your pets at affordable prices</p>
         </div>
     </section>
 
@@ -54,6 +29,7 @@
             <div class="services-intro">
                 <p>At Catnip Acres Veterinary Clinic, we provide a wide range of veterinary services for both cats and dogs. Our focus is on delivering high-quality, affordable care to ensure that all pets in our community can receive the medical attention they need.</p>
                 <p>Our team is committed to treating your pets with compassion and professionalism. We understand that each animal is unique and requires individualized care.</p>
+                <p>Please note that prices listed are subject to change. Additional costs may apply depending on your pet's specific needs and condition.</p>
             </div>
         </div>
     </section>
@@ -63,20 +39,56 @@
         <div class="container">
             <div class="service-detailed">
                 <div class="service-image">
-                    <img src="/api/placeholder/600/400" alt="Wellness Exams">
+                    <img src="https://images.unsplash.com/photo-1581888227599-779811939961?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Veterinarian performing wellness exam on a cat">
                 </div>
                 <div class="service-info">
-                    <h2>Wellness Exams</h2>
-                    <p>Regular check-ups and preventative care to keep your pet healthy. We offer comprehensive physical examinations to detect any potential health issues early.</p>
-                    <p>Our wellness exams include:</p>
-                    <ul>
-                        <li>Thorough physical examination</li>
-                        <li>Weight and nutritional assessment</li>
-                        <li>Dental health check</li>
-                        <li>Discussion of any behavioral concerns</li>
-                        <li>Preventative care recommendations</li>
-                    </ul>
-                    <p>Regular wellness exams are essential for maintaining your pet's long-term health and can help catch potential issues before they become serious problems.</p>
+                    <h2 class="expandable-header">
+                        Wellness Exams
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </h2>
+                    <div class="expandable-content">
+                        <p>Regular check-ups and preventative care to keep your pet healthy. We offer comprehensive physical examinations to detect any potential health issues early.</p>
+                        <p>During a wellness exam, our veterinarian will:</p>
+                        <ul>
+                            <li>Perform a thorough nose-to-tail examination</li>
+                            <li>Check vital signs (temperature, heart rate, respiratory rate)</li>
+                            <li>Assess body condition and weight</li>
+                            <li>Examine eyes, ears, teeth, and coat condition</li>
+                            <li>Discuss nutrition, behavior, and exercise</li>
+                            <li>Recommend appropriate vaccinations and preventative care</li>
+                        </ul>
+                        <p>Regular wellness exams are essential for catching health issues before they become serious, especially since pets can't tell us when they're not feeling well. We recommend annual exams for adult pets and semi-annual exams for senior pets (7+ years).</p>
+                        
+                        <div class="pricing-table">
+                            <h3>Pricing</h3>
+                            <table>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr>
+                                    <td>Initial Wellness Exam</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Wellness Exam</td>
+                                    <td>$40.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Senior Pet Exam (7+ years)</td>
+                                    <td>$50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Kitten/Puppy Initial Exam</td>
+                                    <td>$35.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Follow-up Visit</td>
+                                    <td>$25.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,40 +98,180 @@
         <div class="container">
             <div class="service-detailed reverse">
                 <div class="service-image">
-                    <img src="/api/placeholder/600/400" alt="Vaccinations">
+                    <img src="https://images.pexels.com/photos/6816869/pexels-photo-6816869.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Veterinarian giving vaccination to a pet">
                 </div>
                 <div class="service-info">
-                    <h2>Vaccinations</h2>
-                    <p>Protection against common and serious diseases. We provide core and lifestyle vaccinations for both cats and dogs tailored to their specific needs.</p>
-                    <p>For dogs, we offer vaccinations for:</p>
-                    <ul>
-                        <li>Rabies</li>
-                        <li>Distemper, Hepatitis, Parainfluenza, and Parvovirus (DHPP)</li>
-                        <li>Bordetella (Kennel Cough)</li>
-                        <li>Leptospirosis</li>
-                        <li>Lyme Disease</li>
-                    </ul>
-                    <p>For cats, we offer vaccinations for:</p>
-                    <ul>
-                        <li>Rabies</li>
-                        <li>Feline Viral Rhinotracheitis, Calicivirus, and Panleukopenia (FVRCP)</li>
-                        <li>Feline Leukemia (FeLV)</li>
-                    </ul>
-                    <p>We provide affordable vaccination packages and offer walk-in vaccination services on Wednesdays from 10:00 AM to 2:00 PM.</p>
+                    <h2 class="expandable-header">
+                        Vaccinations
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </h2>
+                    <div class="expandable-content">
+                        <p>Protection against common and serious diseases. We provide core and lifestyle vaccinations for both cats and dogs tailored to their specific needs.</p>
+                        <p>Vaccinations are an essential part of preventative healthcare for your pet. They stimulate the immune system to create protection against infectious diseases, many of which can be life-threatening.</p>
+                        <p>For dogs, we recommend:</p>
+                        <ul>
+                            <li>Rabies - Required by law and protects against the fatal rabies virus</li>
+                            <li>DHPP - Protects against distemper, hepatitis, parainfluenza, and parvovirus</li>
+                            <li>Bordetella - Prevents kennel cough, recommended for dogs that visit groomers, boarding facilities, or dog parks</li>
+                            <li>Leptospirosis - Protects against a bacterial infection that can cause kidney and liver damage</li>
+                            <li>Lyme - Recommended for dogs in areas with high tick populations</li>
+                        </ul>
+                        <p>For cats, we recommend:</p>
+                        <ul>
+                            <li>Rabies - Required by law and protects against the fatal rabies virus</li>
+                            <li>FVRCP - Protects against feline viral rhinotracheitis, calicivirus, and panleukopenia</li>
+                            <li>FeLV - Recommended for outdoor cats or those living with FeLV-positive cats</li>
+                        </ul>
+                        
+                        <div class="pricing-table">
+                            <h3>Dog Vaccinations</h3>
+                            <table>
+                                <tr>
+                                    <th>Vaccination</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr>
+                                    <td>Rabies (1 or 3 year)</td>
+                                    <td>$15.00</td>
+                                </tr>
+                                <tr>
+                                    <td>DHPP (Distemper, Hepatitis, Parainfluenza, Parvo)</td>
+                                    <td>$25.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Bordetella (Kennel Cough)</td>
+                                    <td>$20.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Leptospirosis</td>
+                                    <td>$18.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Lyme Disease</td>
+                                    <td>$30.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Canine Influenza</td>
+                                    <td>$35.00</td>
+                                </tr>
+                            </table>
+                            
+                            <h3>Cat Vaccinations</h3>
+                            <table>
+                                <tr>
+                                    <th>Vaccination</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr>
+                                    <td>Rabies (1 or 3 year)</td>
+                                    <td>$15.00</td>
+                                </tr>
+                                <tr>
+                                    <td>FVRCP (Feline Viral Rhinotracheitis, Calicivirus, Panleukopenia)</td>
+                                    <td>$25.00</td>
+                                </tr>
+                                <tr>
+                                    <td>FeLV (Feline Leukemia)</td>
+                                    <td>$25.00</td>
+                                </tr>
+                            </table>
+                            
+                            <h3>Vaccination Packages</h3>
+                            <table>
+                                <tr>
+                                    <th>Package</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr>
+                                    <td>Puppy Package (DHPP + Rabies)</td>
+                                    <td>$35.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Kitten Package (FVRCP + Rabies)</td>
+                                    <td>$35.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Adult Dog Annual (DHPP + Rabies)</td>
+                                    <td>$35.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Adult Cat Annual (FVRCP + Rabies)</td>
+                                    <td>$35.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <p>We provide affordable vaccination packages and offer walk-in vaccination services on Wednesdays from 10:00 AM to 2:00 PM.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="spay-neuter" class="section bg-light">
-        <div class="container">
-            <div class="service-detailed">
-                <div class="service-image">
-                    <img src="/api/placeholder/600/400" alt="Spay and Neuter">
-                </div>
-                <div class="service-info">
-                    <h2>Spay & Neuter</h2>
+    <div class="container">
+        <div class="service-detailed">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/6235233/pexels-photo-6235233.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Veterinarian preparing for surgery">
+            </div>
+            <div class="service-info">
+                <h2 class="expandable-header">
+                    Spay & Neuter
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </h2>
+                <div class="expandable-content">
                     <p>Low-cost sterilization services to help control the pet population and improve your pet's health and behavior. We specialize in high-volume/low-cost cat spay and neuter procedures.</p>
+                    
+                    <div class="pricing-table">
+                        <h3>Pricing</h3>
+                        <table>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Cat Spay (Female)</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cat Neuter (Male)</td>
+                                <td>$55.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dog Spay (Female) Under 50 lbs</td>
+                                <td>$120.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dog Spay (Female) 50-80 lbs</td>
+                                <td>$150.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dog Spay (Female) Over 80 lbs</td>
+                                <td>$175.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dog Neuter (Male) Under 50 lbs</td>
+                                <td>$100.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dog Neuter (Male) 50-80 lbs</td>
+                                <td>$120.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dog Neuter (Male) Over 80 lbs</td>
+                                <td>$140.00</td>
+                            </tr>
+                            <tr>
+                                <td>Pregnant or In-Heat Fee (Additional)</td>
+                                <td>$25.00</td>
+                            </tr>
+                            <tr>
+                                <td>Retained Testicle Fee (Additional)</td>
+                                <td>$30.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
                     <p>Benefits of spaying/neutering include:</p>
                     <ul>
                         <li>Prevention of unwanted litters</li>
@@ -132,67 +284,254 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="diagnostics" class="section">
-        <div class="container">
-            <div class="service-detailed reverse">
-                <div class="service-image">
-                    <img src="/api/placeholder/600/400" alt="Diagnostic Services">
-                </div>
-                <div class="service-info">
-                    <h2>Diagnostic Services</h2>
+<section id="diagnostics" class="section">
+    <div class="container">
+        <div class="service-detailed reverse">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/6235651/pexels-photo-6235651.jpeg?auto=format&q=100&w=600&h=400&dpr=2" alt="Veterinarian with ultrasound diagnostic equipment" class="diagnostics-image">
+            </div>
+            <div class="service-info">
+                <h2 class="expandable-header">
+                    Diagnostic Services
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </h2>
+                <div class="expandable-content">
                     <p>Send-off lab work (blood-work, fecal tests, urinalysis, etc.) and in-house x-rays available at time of appointment, if necessary.</p>
-                    <p>Our diagnostic capabilities include:</p>
-                    <ul>
-                        <li>Complete blood count (CBC)</li>
-                        <li>Blood chemistry panels</li>
-                        <li>Thyroid testing</li>
-                        <li>Urinalysis</li>
-                        <li>Fecal testing for parasites</li>
-                        <li>Digital radiography (x-rays)</li>
-                        <li>FeLV/FIV testing for cats</li>
-                        <li>Heartworm testing for dogs</li>
-                    </ul>
+                    
+                    <div class="pricing-table">
+                        <h3>Pricing</h3>
+                        <table>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Complete Blood Count (CBC)</td>
+                                <td>$45.00</td>
+                            </tr>
+                            <tr>
+                                <td>Blood Chemistry Panel (Basic)</td>
+                                <td>$85.00</td>
+                            </tr>
+                            <tr>
+                                <td>Blood Chemistry Panel (Comprehensive)</td>
+                                <td>$120.00</td>
+                            </tr>
+                            <tr>
+                                <td>Thyroid Testing (T4)</td>
+                                <td>$45.00</td>
+                            </tr>
+                            <tr>
+                                <td>Urinalysis</td>
+                                <td>$35.00</td>
+                            </tr>
+                            <tr>
+                                <td>Fecal Testing</td>
+                                <td>$25.00</td>
+                            </tr>
+                            <tr>
+                                <td>Digital X-rays (1-2 views)</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Digital X-rays (Additional views)</td>
+                                <td>$30.00/view</td>
+                            </tr>
+                            <tr>
+                                <td>FeLV/FIV Testing (Cats)</td>
+                                <td>$35.00</td>
+                            </tr>
+                            <tr>
+                                <td>Heartworm Testing (Dogs)</td>
+                                <td>$25.00</td>
+                            </tr>
+                            <tr>
+                                <td>Ear Cytology</td>
+                                <td>$20.00</td>
+                            </tr>
+                            <tr>
+                                <td>Skin Scrape/Cytology</td>
+                                <td>$25.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
                     <p>Timely and accurate diagnostics are crucial for developing effective treatment plans for your pet.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="surgery" class="section bg-light">
-        <div class="container">
-            <div class="service-detailed">
-                <div class="service-image">
-                    <img src="/api/placeholder/600/400" alt="Surgical Procedures">
-                </div>
-                <div class="service-info">
-                    <h2>Surgical Procedures</h2>
+<section id="surgery" class="section bg-light">
+    <div class="container">
+        <div class="service-detailed">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/7469214/pexels-photo-7469214.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Veterinary surgical procedures">
+            </div>
+            <div class="service-info">
+                <h2 class="expandable-header">
+                    Surgical Procedures
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </h2>
+                <div class="expandable-content">
                     <p>We offer a range of surgical procedures with the highest standards of care and safety for your pet. Our clinic is equipped with modern surgical equipment.</p>
-                    <p>Our surgical services include:</p>
+                    
+                    <div class="pricing-table">
+                        <h3>Common Surgical Procedures</h3>
+                        <table>
+                            <tr>
+                                <th>Procedure</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Mass Removal (Small)</td>
+                                <td>$150.00-$250.00</td>
+                            </tr>
+                            <tr>
+                                <td>Mass Removal (Large)</td>
+                                <td>$250.00-$400.00</td>
+                            </tr>
+                            <tr>
+                                <td>Wound Repair (Minor)</td>
+                                <td>$100.00-$200.00</td>
+                            </tr>
+                            <tr>
+                                <td>Wound Repair (Complex)</td>
+                                <td>$200.00-$400.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dental Cleaning (Basic)</td>
+                                <td>$150.00-$200.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dental Extractions</td>
+                                <td>$10.00-$50.00 per tooth</td>
+                            </tr>
+                            <tr>
+                                <td>Foreign Body Removal</td>
+                                <td>$400.00-$800.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <p>Pricing for surgical procedures varies based on the complexity of the procedure, your pet's size, age, and overall health status. All surgical fees include:</p>
                     <ul>
-                        <li>Spay and neuter procedures</li>
-                        <li>Mass removals</li>
-                        <li>Wound repair</li>
-                        <li>Dental extractions</li>
-                        <li>Minor orthopedic procedures</li>
-                        <li>Foreign body removal</li>
+                        <li>Pre-surgical examination</li>
+                        <li>Anesthesia</li>
+                        <li>Monitoring during surgery</li>
+                        <li>Pain management</li>
+                        <li>Basic post-operative care</li>
                     </ul>
-                    <p>All surgical patients receive appropriate pain management and careful monitoring throughout their procedure and recovery.</p>
+                    <p>We will provide a detailed estimate prior to any surgical procedure.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="telehealth" class="section">
-        <div class="container">
-            <div class="service-detailed reverse">
-                <div class="service-image">
-                    <img src="/api/placeholder/600/400" alt="Telehealth Consultations">
+<section id="preventative" class="section">
+    <div class="container">
+        <div class="service-detailed reverse">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Preventative pet care">
+            </div>
+            <div class="service-info">
+                <h2 class="expandable-header">
+                    Preventative Care
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </h2>
+                <div class="expandable-content">
+                    <p>Prevention is better than cure. We offer a range of preventative treatments to keep your pet healthy year-round.</p>
+                    
+                    <div class="pricing-table">
+                        <h3>Pricing</h3>
+                        <table>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Heartworm Prevention (Dogs) - Monthly</td>
+                                <td>$7.00-$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Flea/Tick Prevention - Monthly</td>
+                                <td>$12.00-$20.00</td>
+                            </tr>
+                            <tr>
+                                <td>Deworming (Cats & Small Dogs)</td>
+                                <td>$15.00-$25.00</td>
+                            </tr>
+                            <tr>
+                                <td>Deworming (Medium & Large Dogs)</td>
+                                <td>$25.00-$35.00</td>
+                            </tr>
+                            <tr>
+                                <td>Nail Trim</td>
+                                <td>$12.00</td>
+                            </tr>
+                            <tr>
+                                <td>Anal Gland Expression</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Ear Cleaning</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Microchipping</td>
+                                <td>$40.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <p>Regular preventative care helps your pet avoid serious health issues and can significantly reduce long-term healthcare costs.</p>
                 </div>
-                <div class="service-info">
-                    <h2>Telehealth Consultations</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="telehealth" class="section bg-light">
+    <div class="container">
+        <div class="service-detailed">
+            <div class="service-image">
+                <img src="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Telehealth pet consultation">
+            </div>
+            <div class="service-info">
+                <h2 class="expandable-header">
+                    Telehealth Consultations
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </h2>
+                <div class="expandable-content">
                     <p>If not physically present, our veterinarian may be available for tele-health consultations through our certified veterinary technician.</p>
+                    
+                    <div class="pricing-table">
+                        <h3>Pricing</h3>
+                        <table>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>Initial Telehealth Consultation</td>
+                                <td>$30.00</td>
+                            </tr>
+                            <tr>
+                                <td>Follow-up Telehealth Consultation</td>
+                                <td>$20.00</td>
+                            </tr>
+                            <tr>
+                                <td>Extended Consultation (30+ minutes)</td>
+                                <td>$45.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
                     <p>Telehealth services can be useful for:</p>
                     <ul>
                         <li>Follow-up consultations</li>
@@ -205,12 +544,54 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Additional Services -->
-    <section class="section bg-light">
+    <section id="additional-services" class="section">
         <div class="container">
             <h2 class="section-title">Additional Services</h2>
+            <div class="pricing-table full-width">
+                <table>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Euthanasia</td>
+                        <td>$75.00</td>
+                    </tr>
+                    <tr>
+                        <td>Cremation (Communal)</td>
+                        <td>$60.00</td>
+                    </tr>
+                    <tr>
+                        <td>Cremation (Private with Ashes Returned)</td>
+                        <td>$160.00-$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>Health Certificates</td>
+                        <td>$35.00</td>
+                    </tr>
+                    <tr>
+                        <td>Prescription Refill (without exam)</td>
+                        <td>$5.00-$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Medical Records Transfer</td>
+                        <td>No Charge</td>
+                    </tr>
+                    <tr>
+                        <td>Pet ID Tag</td>
+                        <td>$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Geriatric Screening</td>
+                        <td>$120.00</td>
+                    </tr>
+                </table>
+            </div>
+            
             <div class="additional-services">
                 <div class="additional-service">
                     <h3><i class="fas fa-stethoscope"></i> Dental Care</h3>
@@ -241,13 +622,14 @@
     </section>
 
     <!-- Pricing Notice -->
-    <section class="section">
+    <section class="section bg-light">
         <div class="container">
             <div class="notice-container">
                 <h2 class="section-title">Pricing Information</h2>
                 <div class="notice">
-                    <p>At Catnip Acres, we strive to keep our services affordable without compromising on quality. Prices may vary based on your pet's specific needs and condition. Please contact us for current pricing information.</p>
-                    <p>We accept cash, credit cards, debit cards, CareCredit, and Scratchpay to help make veterinary care accessible to all pet owners.</p>
+                    <p><strong>Important Note:</strong> The prices listed above are subject to change and may vary based on your pet's specific needs, condition, and any additional treatments that may be required. We will always provide you with a detailed estimate before proceeding with any treatments or procedures.</p>
+                    <p>At Catnip Acres, we strive to keep our services affordable without compromising on quality. We accept cash, credit cards, debit cards, CareCredit, and Scratchpay to help make veterinary care accessible to all pet owners.</p>
+                    <p>Please call us at (724) 627-0846 for the most current pricing information or to discuss payment options.</p>
                 </div>
             </div>
         </div>
@@ -262,56 +644,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>Catnip Acres</h3>
-                    <p>Providing affordable veterinary care for cats and dogs in Waynesburg, PA and the surrounding area.</p>
-                    <p>"Saving a life, one animal at a time"</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="hours.html">Hours</a></li>
-                        <li><a href="payment.html">Payment</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#wellness">Wellness Exams</a></li>
-                        <li><a href="#vaccinations">Vaccinations</a></li>
-                        <li><a href="#spay-neuter">Spay & Neuter</a></li>
-                        <li><a href="#diagnostics">Diagnostic Services</a></li>
-                        <li><a href="#surgery">Surgical Procedures</a></li>
-                        <li><a href="#telehealth">Telehealth Consultations</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 1159 Morris Street, Waynesburg, PA 15370</li>
-                        <li><i class="fas fa-phone"></i> (724) 627-0846</li>
-                        <li><i class="fas fa-envelope"></i> info@catnip-acres.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Catnip Acres Veterinary Clinic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="js-scripts.js"></script>

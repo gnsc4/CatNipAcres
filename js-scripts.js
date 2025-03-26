@@ -1,46 +1,123 @@
-// Set initial theme based on user preference
+// Component Loading for Local Files
 document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.getElementById('theme-toggle');
+    // Header HTML content
+    const headerHTML = `
+        <header>
+            <div class="container header-container">
+                <div class="logo">
+                    <img src="Logo_CatNipAcres.png" alt="Catnip Acres Logo">
+                    <div class="logo-text">
+                        <h1>Catnip Acres</h1>
+                        <span>Veterinary Clinic</span>
+                    </div>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" id="nav-index">Home</a></li>
+                        <li><a href="about.html" id="nav-about">About</a></li>
+                        <li><a href="services.html" id="nav-services">Services</a></li>
+                        <li><a href="hours.html" id="nav-hours">Hours</a></li>
+                        <li><a href="payment.html" id="nav-payment">Payment</a></li>
+                        <li><a href="additional-resources.html" id="nav-additional-resources">Resources</a></li>
+                        <li><a href="dental-referrals.html" id="nav-dental-referrals">Dental Referrals</a></li>
+                        <li><a href="contact.html" id="nav-contact">Contact</a></li>
+                        <li class="call-button"><a href="tel:7246270846"><i class="fas fa-phone"></i> (724) 627-0846</a></li>
+                        <li class="theme-toggle" id="theme-toggle">
+                            <i class="fas fa-moon theme-toggle-icon moon"></i>
+                            <i class="fas fa-sun theme-toggle-icon sun"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    `;
+
+    // Footer HTML content
+    const footerHTML = `
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <h3>Catnip Acres</h3>
+                        <p>Providing affordable veterinary care for cats and dogs in Waynesburg, PA and the surrounding area.</p>
+                        <p>"Saving a life, one animal at a time"</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100090624877802#" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="mailto:catnip.acres@hotmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="hours.html">Hours</a></li>
+                            <li><a href="payment.html">Payment</a></li>
+                            <li><a href="additional-resources.html">Resources</a></li>
+                            <li><a href="dental-referrals.html">Dental Referrals</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="services.html#wellness">Wellness Exams</a></li>
+                            <li><a href="services.html#vaccinations">Vaccinations</a></li>
+                            <li><a href="services.html#spay-neuter">Spay & Neuter</a></li>
+                            <li><a href="services.html#diagnostics">Diagnostic Services</a></li>
+                            <li><a href="services.html#surgery">Surgical Procedures</a></li>
+                            <li><a href="services.html#telehealth">Telehealth Consultations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul class="footer-links">
+                            <li><i class="fas fa-map-marker-alt"></i> 1159 Morris Street, Waynesburg, PA 15370</li>
+                            <li><i class="fas fa-phone"></i> (724) 627-0846</li>
+                            <li><i class="fas fa-envelope"></i> info@catnip-acres.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Catnip Acres Veterinary Clinic. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    `;
+
+    // Insert header and footer into the page
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    const footerPlaceholder = document.getElementById('footer-placeholder');
     
-    // Check for saved theme preference or prefer-color-scheme
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Apply theme
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        document.body.classList.add('dark-mode');
-    } else {
-        document.body.classList.add('light-mode');
+    if (headerPlaceholder) {
+        headerPlaceholder.innerHTML = headerHTML;
+        
+        // Set active page in navigation
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const pageName = currentPage.split('.')[0] || 'index';
+        const navLink = document.getElementById(`nav-${pageName}`);
+        
+        if (navLink) {
+            navLink.classList.add('active');
+        }
     }
     
-    // Toggle theme when button is clicked
-    themeToggle.addEventListener('click', function() {
-        if (document.body.classList.contains('dark-mode')) {
-            document.body.classList.replace('dark-mode', 'light-mode');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.body.classList.replace('light-mode', 'dark-mode');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
+    if (footerPlaceholder) {
+        footerPlaceholder.innerHTML = footerHTML;
+    }
+    
+    // Initialize theme toggle
+    initializeThemeToggle();
+    
+    // Initialize mobile menu
+    initializeMobileMenu();
 
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const nav = document.querySelector('nav');
-
-    mobileMenuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = nav.contains(event.target);
-        const isClickOnToggle = mobileMenuToggle.contains(event.target);
-        
-        if (nav.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
-            nav.classList.remove('active');
-        }
-    });
+    // Initialize expandable sections
+    initializeExpandableSections();
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -60,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu after clicking a link
+                const nav = document.querySelector('nav');
                 if (nav.classList.contains('active')) {
                     nav.classList.remove('active');
                 }
@@ -229,4 +307,129 @@ document.addEventListener('DOMContentLoaded', function() {
             showTestimonial(newIndex);
         }, 5000);
     }
+
+    // COG Form Submission
+    const cogForm = document.getElementById('cog-form');
+    const formResponse = document.getElementById('form-response');
+    
+    if (cogForm) {
+        cogForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to your server
+            // For demo purposes, we'll just show a success message
+            cogForm.style.display = 'none';
+            formResponse.style.display = 'block';
+            
+            // Scroll to response message
+            formResponse.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
+    // Display today's hours on the index page
+    displayTodaysHours();
 });
+
+// Theme Toggle Functionality
+function initializeThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    if (!themeToggle) return;
+    
+    // Check for saved theme preference or prefer-color-scheme
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Apply theme
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.add('light-mode');
+    }
+    
+    // Toggle theme when button is clicked
+    themeToggle.addEventListener('click', function() {
+        if (document.body.classList.contains('dark-mode')) {
+            document.body.classList.replace('dark-mode', 'light-mode');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.body.classList.replace('light-mode', 'dark-mode');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}
+
+// Mobile Menu Functionality
+function initializeMobileMenu() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('nav');
+    
+    if (!mobileMenuToggle || !nav) return;
+
+    mobileMenuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = nav.contains(event.target);
+        const isClickOnToggle = mobileMenuToggle.contains(event.target);
+        
+        if (nav.classList.contains('active') && !isClickInsideNav && !isClickOnToggle) {
+            nav.classList.remove('active');
+        }
+    });
+}
+
+// Expandable sections functionality
+function initializeExpandableSections() {
+    const expandableHeaders = document.querySelectorAll('.expandable-header');
+    
+    expandableHeaders.forEach(header => {
+        // Make first section expanded by default
+        if (header === expandableHeaders[0]) {
+            header.classList.add('expanded');
+            const content = header.nextElementSibling;
+            content.classList.add('expanded');
+        }
+        
+        header.addEventListener('click', function() {
+            // Toggle current section
+            this.classList.toggle('expanded');
+            const content = this.nextElementSibling;
+            content.classList.toggle('expanded');
+            
+            // Smooth scroll to this section if it's being expanded
+            if (this.classList.contains('expanded')) {
+                setTimeout(() => {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        });
+    });
+}
+
+// Function to display today's hours
+function displayTodaysHours() {
+    const todayHoursElement = document.getElementById('today-hours');
+    
+    if (!todayHoursElement) return;
+    
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    
+    const hoursSchedule = [
+        { day: "Sunday", hours: "CLOSED" },
+        { day: "Monday", hours: "9:00 AM - 3:00 PM" },
+        { day: "Tuesday", hours: "CLOSED (Except for scheduled surgeries)" },
+        { day: "Wednesday", hours: "10:00 AM - 2:00 PM (Walk-in for vaccinations ONLY)" },
+        { day: "Thursday", hours: "11:00 AM - 3:00 PM" },
+        { day: "Friday", hours: "CLOSED (Except for scheduled spay & neuter clinics)" },
+        { day: "Saturday", hours: "CLOSED (Except for scheduled spay & neuter clinics)" }
+    ];
+    
+    const todayInfo = hoursSchedule[dayOfWeek];
+    const todayDisplay = `<span class="today-label">Today (${todayInfo.day}):</span> <span class="today-hours-value">${todayInfo.hours}</span>`;
+    
+    todayHoursElement.innerHTML = todayDisplay;
+}

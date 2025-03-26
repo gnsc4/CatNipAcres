@@ -113,6 +113,114 @@ a:hover {
     text-align: center;
 }
 
+/* Full Width Banner */
+.full-width-banner {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    line-height: 0; /* Removes any gap below the image */
+    position: relative;
+    z-index: 2; /* Place banner above the bubbles */
+}
+
+.full-width-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 8px 8px; /* Rounded corners on bottom */
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* Banner Container with Bubbles */
+.banner-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Bubbles Background */
+.bubbles-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bubbles-background::before,
+.bubbles-background::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Create multiple bubble layers with pseudo-elements */
+.bubbles-background::before {
+    background: radial-gradient(circle at 10% 30%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.4) 4%, transparent 5%),
+                radial-gradient(circle at 25% 60%, rgba(70, 130, 180, 0.45) 0%, rgba(70, 130, 180, 0.45) 3%, transparent 4%),
+                radial-gradient(circle at 40% 20%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.4) 6%, transparent 7%),
+                radial-gradient(circle at 55% 70%, rgba(70, 130, 180, 0.45) 0%, rgba(70, 130, 180, 0.45) 5%, transparent 6%),
+                radial-gradient(circle at 70% 35%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.4) 4%, transparent 5%),
+                radial-gradient(circle at 85% 50%, rgba(70, 130, 180, 0.45) 0%, rgba(70, 130, 180, 0.45) 3%, transparent 4%);
+}
+
+.bubbles-background::after {
+    background: radial-gradient(circle at 15% 40%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.4) 3%, transparent 4%),
+                radial-gradient(circle at 30% 75%, rgba(70, 130, 180, 0.45) 0%, rgba(70, 130, 180, 0.45) 4%, transparent 5%),
+                radial-gradient(circle at 45% 30%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.4) 5%, transparent 6%),
+                radial-gradient(circle at 60% 65%, rgba(70, 130, 180, 0.45) 0%, rgba(70, 130, 180, 0.45) 3%, transparent 4%),
+                radial-gradient(circle at 75% 25%, rgba(100, 149, 237, 0.4) 0%, rgba(100, 149, 237, 0.4) 5%, transparent 6%),
+                radial-gradient(circle at 90% 60%, rgba(70, 130, 180, 0.45) 0%, rgba(70, 130, 180, 0.45) 4%, transparent 5%);
+}
+
+/* Add dark mode styles for the bubbles */
+.dark-mode .bubbles-background::before,
+.dark-mode .bubbles-background::after {
+    opacity: 0.4;
+    background-image: radial-gradient(circle at 10% 30%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 4%, transparent 5%),
+                    radial-gradient(circle at 25% 60%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 3%, transparent 4%),
+                    radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 6%, transparent 7%),
+                    radial-gradient(circle at 55% 70%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 5%, transparent 6%),
+                    radial-gradient(circle at 70% 35%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 4%, transparent 5%),
+                    radial-gradient(circle at 85% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 3%, transparent 4%);
+}
+
+.dark-mode .bubbles-background::after {
+    background-image: radial-gradient(circle at 15% 40%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 3%, transparent 4%),
+                    radial-gradient(circle at 30% 75%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 4%, transparent 5%),
+                    radial-gradient(circle at 45% 30%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 5%, transparent 6%),
+                    radial-gradient(circle at 60% 65%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 3%, transparent 4%),
+                    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 5%, transparent 6%),
+                    radial-gradient(circle at 90% 60%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 4%, transparent 5%);
+}
+
+/* Dark mode bubbles */
+.dark-mode .bubbles-background::before {
+    opacity: 0.8;
+    background-image: radial-gradient(circle at 10% 30%, rgba(100, 149, 237, 0.2) 0%, rgba(100, 149, 237, 0.2) 4%, transparent 5%),
+                    radial-gradient(circle at 25% 60%, rgba(135, 206, 250, 0.25) 0%, rgba(135, 206, 250, 0.25) 3%, transparent 4%),
+                    radial-gradient(circle at 40% 20%, rgba(100, 149, 237, 0.2) 0%, rgba(100, 149, 237, 0.2) 6%, transparent 7%),
+                    radial-gradient(circle at 55% 70%, rgba(135, 206, 250, 0.25) 0%, rgba(135, 206, 250, 0.25) 5%, transparent 6%),
+                    radial-gradient(circle at 70% 35%, rgba(100, 149, 237, 0.2) 0%, rgba(100, 149, 237, 0.2) 4%, transparent 5%),
+                    radial-gradient(circle at 85% 50%, rgba(135, 206, 250, 0.25) 0%, rgba(135, 206, 250, 0.25) 3%, transparent 4%);
+}
+
+.dark-mode .bubbles-background::after {
+    opacity: 0.8;
+    background-image: radial-gradient(circle at 15% 40%, rgba(100, 149, 237, 0.2) 0%, rgba(100, 149, 237, 0.2) 3%, transparent 4%),
+                    radial-gradient(circle at 30% 75%, rgba(135, 206, 250, 0.25) 0%, rgba(135, 206, 250, 0.25) 4%, transparent 5%),
+                    radial-gradient(circle at 45% 30%, rgba(100, 149, 237, 0.2) 0%, rgba(100, 149, 237, 0.2) 5%, transparent 6%),
+                    radial-gradient(circle at 60% 65%, rgba(135, 206, 250, 0.25) 0%, rgba(135, 206, 250, 0.25) 3%, transparent 4%),
+                    radial-gradient(circle at 75% 25%, rgba(100, 149, 237, 0.2) 0%, rgba(100, 149, 237, 0.2) 5%, transparent 6%),
+                    radial-gradient(circle at 90% 60%, rgba(135, 206, 250, 0.25) 0%, rgba(135, 206, 250, 0.25) 4%, transparent 5%);
+}
+
 /* Header */
 header {
     background-color: var(--bg-tertiary);
@@ -135,8 +243,16 @@ header {
 }
 
 .logo img {
-    height: 60px;
+    height: 90px; /* Increased from 60px to 90px */
     margin-right: 1rem;
+}
+
+/* Add background for logo in dark mode */
+.dark-mode .logo img {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .logo-text {
@@ -145,12 +261,12 @@ header {
 }
 
 .logo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Slightly increased to match larger logo */
     margin-bottom: 0;
 }
 
 .logo-text span {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Slightly increased to match larger logo */
     color: var(--text-secondary);
     font-style: italic;
 }
@@ -617,6 +733,12 @@ nav a:hover:after, nav a.active:after {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--shadow-color);
+    transition: all 0.3s;
+}
+
+.emergency-clinic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 .emergency-clinic h3 {
@@ -731,18 +853,16 @@ nav a:hover:after, nav a.active:after {
     min-width: 300px;
 }
 
-.financing-option img {
-    height: 50px;
+.financing-option img.financing-logo {
+    height: auto;
+    max-width: 200px;
+    max-height: 80px;
     margin-bottom: 1rem;
+    object-fit: contain;
 }
 
 .financing-option h3 {
     margin-bottom: 1rem;
-}
-
-.financing-option ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
 }
 
 /* Online Payment */
@@ -1237,4 +1357,158 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Pricing Tables */
+.pricing-table {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.pricing-table h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-tertiary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.pricing-table th {
+    background-color: var(--heading-color);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.pricing-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.pricing-table.full-width {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Dark mode adjustments for pricing tables */
+.dark-mode .pricing-table th {
+    background-color: var(--accent-color);
+}
+
+/* Service Category Navigation */
+.service-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.service-nav-link {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--bg-tertiary);
+    border-radius: 30px;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.service-nav-link:hover,
+.service-nav-link.active {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Responsive adjustments for pricing tables */
+@media (max-width: 768px) {
+    .pricing-table {
+        font-size: 0.9rem;
+    }
+    
+    .pricing-table th,
+    .pricing-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Expandable Service Sections */
+.expandable-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-right: 10px;
+}
+
+.expandable-header:hover {
+    color: var(--accent-color);
+}
+
+.toggle-icon {
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon i {
+    transition: transform 0.3s ease;
+}
+
+.expandable-header.expanded .toggle-icon i {
+    transform: rotate(180deg);
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    opacity: 0;
+}
+
+.expandable-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.3s ease 0.2s;
+}
+
+/* Custom image adjustments */
+.diagnostics-image {
+    object-fit: cover;
+    object-position: center 38%; /* Adjusted to focus on the middle section with table, dog, vets and machine */
+    height: 400px; /* Ensures consistent height */
+}
+
+/* Today's Hours Styling */
+.today-label {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.today-hours-value {
+    font-weight: 600;
+}
+
+/* CLOSED text is highlighted differently */
+.today-hours-value:contains("CLOSED") {
+    color: var(--error-color);
 }

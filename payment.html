@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Options | Catnip Acres Veterinary Clinic</title>
     <meta name="description" content="Learn about payment options and make online payments for services rendered at Catnip Acres Veterinary Clinic in Waynesburg, PA.">
+    <link rel="icon" href="Logo_CatNipAcres.png" type="image/png">
+    <link rel="shortcut icon" href="Logo_CatNipAcres.png" type="image/png">
     <link rel="stylesheet" href="css-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -12,35 +14,8 @@
     <script src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="/api/placeholder/60/60" alt="Catnip Acres Logo">
-                <div class="logo-text">
-                    <h1>Catnip Acres</h1>
-                    <span>Veterinary Clinic</span>
-                </div>
-            </div>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="hours.html">Hours</a></li>
-                    <li><a href="payment.html" class="active">Payment</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="theme-toggle" id="theme-toggle">
-                        <i class="fas fa-moon theme-toggle-icon moon"></i>
-                        <i class="fas fa-sun theme-toggle-icon sun"></i>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Page Banner -->
     <section class="page-banner">
@@ -97,7 +72,7 @@
             <h2 class="section-title">Financing Options</h2>
             <div class="financing-options">
                 <div class="financing-option">
-                    <img src="/api/placeholder/200/100" alt="CareCredit Logo">
+                    <img src="https://www.carecredit.com/sites/cc/image/main_logo.png" alt="CareCredit Logo" class="financing-logo">
                     <h3>CareCredit</h3>
                     <p>CareCredit is a healthcare credit card designed for your health and wellness needs, including veterinary care. It works like a regular credit card but is exclusively for healthcare services.</p>
                     <p>Benefits include:</p>
@@ -109,7 +84,7 @@
                     <a href="https://www.carecredit.com/apply/" target="_blank" class="btn btn-secondary">Apply for CareCredit</a>
                 </div>
                 <div class="financing-option">
-                    <img src="/api/placeholder/200/100" alt="Scratchpay Logo">
+                    <img src="https://scratchpay.com/images/redesigned/header_logo.png" alt="Scratchpay Logo" class="financing-logo">
                     <h3>Scratchpay</h3>
                     <p>Scratchpay offers simple payment plans for veterinary care. You can apply online in minutes and get an instant decision. There's no impact on your credit score to check your eligibility.</p>
                     <p>Features include:</p>
@@ -118,7 +93,7 @@
                         <li>No compounding interest or deferred interest</li>
                         <li>Fast online application</li>
                     </ul>
-                    <a href="https://scratchpay.com/apply" target="_blank" class="btn btn-secondary">Apply for Scratchpay</a>
+                    <a href="https://scratchpay.com/" target="_blank" class="btn btn-secondary">Apply for Scratchpay</a>
                 </div>
             </div>
         </div>
@@ -222,56 +197,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>Catnip Acres</h3>
-                    <p>Providing affordable veterinary care for cats and dogs in Waynesburg, PA and the surrounding area.</p>
-                    <p>"Saving a life, one animal at a time"</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="hours.html">Hours</a></li>
-                        <li><a href="payment.html">Payment</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="services.html#wellness">Wellness Exams</a></li>
-                        <li><a href="services.html#vaccinations">Vaccinations</a></li>
-                        <li><a href="services.html#spay-neuter">Spay & Neuter</a></li>
-                        <li><a href="services.html#diagnostics">Diagnostic Services</a></li>
-                        <li><a href="services.html#surgery">Surgical Procedures</a></li>
-                        <li><a href="services.html#telehealth">Telehealth Consultations</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 1159 Morris Street, Waynesburg, PA 15370</li>
-                        <li><i class="fas fa-phone"></i> (724) 627-0846</li>
-                        <li><i class="fas fa-envelope"></i> info@catnip-acres.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Catnip Acres Veterinary Clinic. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script src="js-scripts.js"></script>
