@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="payment.html" id="nav-payment">Payment</a></li>
                         <li><a href="additional-resources.html" id="nav-additional-resources">Resources</a></li>
                         <li><a href="dental-referrals.html" id="nav-dental-referrals">Dental Referrals</a></li>
+                        <li><a href="euthanasia-cremation.html" id="nav-euthanasia-cremation">End-of-Life Care</a></li>
                         <li><a href="contact.html" id="nav-contact">Contact</a></li>
                         <li class="call-button"><a href="tel:7246270846"><i class="fas fa-phone"></i> (724) 627-0846</a></li>
                         <li class="theme-toggle" id="theme-toggle">
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <li><a href="payment.html">Payment</a></li>
                             <li><a href="additional-resources.html">Resources</a></li>
                             <li><a href="dental-referrals.html">Dental Referrals</a></li>
+                            <li><a href="euthanasia-cremation.html">End-of-Life Care</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
