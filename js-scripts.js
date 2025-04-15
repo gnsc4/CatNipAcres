@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <ul class="footer-links">
                             <li><i class="fas fa-map-marker-alt"></i> 1159 Morris Street, Waynesburg, PA 15370</li>
                             <li><i class="fas fa-phone"></i> (724) 627-0846</li>
-                            <li><i class="fas fa-envelope"></i> info@catnip-acres.com</li>
+                            <li><i class="fas fa-envelope"></i> catnip.acres@hotmail.com</li>
                         </ul>
                     </div>
                 </div>
